@@ -1,15 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>REPL</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://pyscript.net/unstable/pyscript.css" />
+    <script defer src="https://pyscript.net/unstable/pyscript.js"></script>
 </head>
+
 <body>
 <py-config>
-    - https://raw.githubusercontent.com/fedoco/apple-slicer/master/apple.py
-    - https://raw.githubusercontent.com/fedoco/apple-slicer/master/slicer.py
+    [[fetch]]
+    from = "https://raw.githubusercontent.com/fedoco/apple-slicer/master/"
+    files = ["apple.py"]
+    [[fetch]]
+    from = "https://raw.githubusercontent.com/fedoco/apple-slicer/master/"
+    files = ["slicer.py"]
 </py-config>
 <py-script>
-  import slicer
+    from slicer import *
 </py-script>
 </body>
 </html>
